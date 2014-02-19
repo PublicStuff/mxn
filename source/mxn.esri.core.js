@@ -59,7 +59,7 @@ mxn.register('esri', {
 				});
 			
 				me.load.fire();
-				// var basemap = new esri.layers.ArcGISTiledMapServiceLayer("http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer");
+				// var basemap = new esri.layers.ArcGISTiledMapServiceLayer("//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer");
 				// map.addLayer(basemap);
 			});
 
@@ -293,15 +293,15 @@ mxn.register('esri', {
 
 			switch(type) {
 				case mxn.Mapstraction.ROAD:
-					map.addLayer(new esri.layers.ArcGISTiledMapServiceLayer("http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"),0);
+					map.addLayer(new esri.layers.ArcGISTiledMapServiceLayer("//server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"),0);
 					this.currentMapType = mxn.Mapstraction.ROAD;
 					break;
 				case mxn.Mapstraction.SATELLITE:
-					map.addLayer(new esri.layers.ArcGISTiledMapServiceLayer("http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"),0);
+					map.addLayer(new esri.layers.ArcGISTiledMapServiceLayer("//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"),0);
 					this.currentMapType = mxn.Mapstraction.SATELLITE;
 					break;
 				case mxn.Mapstraction.HYBRID:
-					map.addLayer(new esri.layers.ArcGISTiledMapServiceLayer("http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"),0);
+					map.addLayer(new esri.layers.ArcGISTiledMapServiceLayer("//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"),0);
 					break;
 				default:
 					this.setMapType(mxn.Mapstraction.ROAD);
@@ -390,7 +390,7 @@ mxn.register('esri', {
 	
 		toProprietary: function() {
 			var me = this;
-			var iconUrl = (this.iconUrl) ? this.iconUrl : "http://static.arcgis.com/images/Symbols/Shapes/BluePin1LargeB.png";
+			var iconUrl = (this.iconUrl) ? this.iconUrl : "//static.arcgis.com/images/Symbols/Shapes/BluePin1LargeB.png";
 			var thisIcon = new esri.symbol.PictureMarkerSymbol(iconUrl,25,25);
 
 			if (me.iconSize) {
